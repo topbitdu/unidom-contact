@@ -14,4 +14,6 @@ class Unidom::Contact::ContactSubscription < ActiveRecord::Base
   scope :contact_is,    ->(contact)    { where contact:    contact    }
   scope :subscribed_by, ->(subscriber) { where subscriber: subscriber }
 
+  include Unidom::Common::Concerns::ModelExtension
+
 end

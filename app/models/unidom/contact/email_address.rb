@@ -15,6 +15,8 @@ class Unidom::Contact::EmailAddress < ActiveRecord::Base
   scope :local_part_is,   ->(local_part)   { where local_part:   local_part   }
   scope :domain_part_is,  ->(domain_part)  { where domain_part:  domain_part  }
 
+  include Unidom::Common::Concerns::ModelExtension
+
   before_validation do
     self.full_address.strip!
     self.personalized_name = self.full_address if self.personalized_name.blank?
