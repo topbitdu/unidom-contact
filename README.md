@@ -18,6 +18,17 @@ rake db:migrate
 
 ## Call the Model
 ```ruby
-Unidom::Contact::ContactSubscription.subscribed_by(subscriber).valid_at.alive.first
+contact      = MobilePhoneNumber.create phone_number: '13912345678'
+subscriber   = Person.create            name:         'John'
+subscription = Unidom::Contact::ContactSubscription.subscribe contact, subscriber, name: 'John Mobile', primary: true, grade: 0, priority: 0
+# Associate the subscriber & the contact
+
+Unidom::Contact::ContactSubscription.subscribed_by(subscriber).valid_at.alive
+# Get a list of all contact subscriptions of subscriber
+
+Unidom::Contact::ContactSubscription.contact_is(contact).valid_at.alive
+# Get a list of all contact subscriptions of contact
+
 Unidom::Contact::EmailAddress.full_address_is('topbit.du@gmail.com').first
+# Find the Email Address
 ```
