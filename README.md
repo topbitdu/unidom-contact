@@ -20,7 +20,7 @@ rake db:migrate
 ```ruby
 contact      = MobilePhoneNumber.create phone_number: '13912345678'
 subscriber   = Person.create            name:         'John'
-subscription = Unidom::Contact::ContactSubscription.subscribe contact, subscriber, name: 'John Mobile', primary: true, grade: 0, priority: 0
+subscription = Unidom::Contact::ContactSubscription.subscribe contact, subscriber, name: 'John Mobile', primary: true, grade: 0, priority: 0, opened_at: Time.now
 # Associate the subscriber & the contact
 
 Unidom::Contact::ContactSubscription.subscribed_by(subscriber).valid_at.alive

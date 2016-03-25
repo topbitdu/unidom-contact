@@ -16,8 +16,8 @@ class Unidom::Contact::ContactSubscription < ActiveRecord::Base
 
   include Unidom::Common::Concerns::ModelExtension
 
-  def self.subscribe(contact, subscriber, name: subscriber.name, primary: false, grade: 0, priority: 0)
-    contact_is(contact).subscribed_by(subscriber).valid_at.alive.first_or_create name: name, elemental: primary, grade: grade, priority: priority, opened_at: Time.now
+  def self.subscribe(contact, subscriber, name: subscriber.name, primary: false, grade: 0, priority: 0, opened_at: Time.now)
+    contact_is(contact).subscribed_by(subscriber).valid_at.alive.first_or_create name: name, elemental: primary, grade: grade, priority: priority, opened_at: opened_at
   end
 
 end
