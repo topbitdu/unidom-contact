@@ -19,6 +19,7 @@ gem 'unidom-contact'
 ```shell
 rake db:migrate
 ```
+The migration versions start with 200103.
 
 ## Call the Model
 ```ruby
