@@ -16,4 +16,4 @@
 1. Improved the Contact Subscription model to enhance the keyword arguments of the ::subscribe method
 
 ## v0.4
-1. Improved the Ruby Gem Specification to depend on unidom-common v0.7
+1. Improved the Ruby Gem Specification to depend on unidom-common v0.8
