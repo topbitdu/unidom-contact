@@ -23,9 +23,9 @@ The migration versions start with 200103.
 
 ## Call the Model
 ```ruby
-contact      = MobilePhoneNumber.create phone_number: '13912345678'
-subscriber   = Person.create            name:         'John'
-subscription = Unidom::Contact::ContactSubscription.subscribe contact, subscriber, name: 'John Mobile', primary: true, grade: 0, priority: 0, opened_at: Time.now
+contact      = Unidom::Contact::China::MobilePhoneNumber.phone_number_is('13912345678').valid_at.alive.first_or_create!
+subscriber   = Unidom::Party::Person.create! name: 'John'
+subscription = Unidom::Contact::ContactSubscription.subscribe! contact, subscriber, 'John Mobile', true, 0, 0, Time.now
 # Associate the subscriber & the contact
 
 Unidom::Contact::ContactSubscription.subscribed_by(subscriber).valid_at.alive
@@ -36,4 +36,5 @@ Unidom::Contact::ContactSubscription.contact_is(contact).valid_at.alive
 
 Unidom::Contact::EmailAddress.full_address_is('topbit.du@gmail.com').first
 # Find the Email Address
+
 ```
