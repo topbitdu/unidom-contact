@@ -25,7 +25,9 @@ The migration versions start with 200103.
 ```ruby
 contact      = Unidom::Contact::China::MobilePhoneNumber.phone_number_is('13912345678').valid_at.alive.first_or_create!
 subscriber   = Unidom::Party::Person.create! name: 'John'
-subscription = Unidom::Contact::ContactSubscription.subscribe! contact, subscriber, 'John Mobile', true, 0, 0, Time.now
+subscription = Unidom::Contact::ContactSubscription.subscribe! contact: contact, subscriber: subscriber, name: 'John Mobile', primary: true, grade: 0, priority: 0, opened_at: Time.now
+# or
+subscription = Unidom::Contact::ContactSubscription.subscribe! contact: contact, subscriber: subscriber
 # Associate the subscriber & the contact
 
 Unidom::Contact::ContactSubscription.subscribed_by(subscriber).valid_at.alive

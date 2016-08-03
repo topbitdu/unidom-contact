@@ -1,5 +1,5 @@
 module Unidom
   module Contact
-    VERSION = '0.4'.freeze
+    VERSION = '1.0'.freeze
   end
 end
