@@ -4,18 +4,17 @@ class Unidom::Contact::EmailAddress < ActiveRecord::Base
 
   self.table_name = 'unidom_email_addresses'
 
+  include Unidom::Common::Concerns::ModelExtension
+  include Unidom::Contact::Concerns::AsContact
+
   validates :personalized_name, presence: true, length: { in: 1..self.columns_hash['personalized_name'].limit }
   validates :full_address,      presence: true, length: { in: 4..self.columns_hash['full_address'].limit      }, uniqueness: true
   validates :local_part,        presence: true, length: { in: 1..self.columns_hash['local_part'].limit        }
   validates :domain_part,       presence: true, length: { in: 2..self.columns_hash['domain_part'].limit       }
 
-  has_many :contact_subscriptions, class_name: 'Unidom::Contact::ContactSubscription', as: :contact
-
   scope :full_address_is, ->(full_address) { where full_address: full_address }
   scope :local_part_is,   ->(local_part)   { where local_part:   local_part   }
   scope :domain_part_is,  ->(domain_part)  { where domain_part:  domain_part  }
-
-  include Unidom::Common::Concerns::ModelExtension
 
   before_validation do
     self.full_address.strip!

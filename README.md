@@ -40,3 +40,17 @@ Unidom::Contact::EmailAddress.full_address_is('topbit.du@gmail.com').first
 # Find the Email Address
 
 ```
+
+## Include the Concerns
+```ruby
+include Unidom::Contact::Concerns::AsContact
+include Unidom::Contact::Concerns::AsSubscriber
+```
+
+### As Contact concern
+The As Contact concern do the following tasks for the includer automatically:
+1. Define the has_many :contact_subscriptions macro as: ``has_many :contact_subscriptions, class_name: 'Unidom::Contact::ContactSubscription', as: :contact``
+
+### As Subscriber concern
+The As Subscriber concern do the following tasks for the includer automatically:
+1. Define the has_many :contact_subscriptions macro as: ``has_many :contact_subscriptions, class_name: 'Unidom::Contact::ContactSubscription', as: :subscriber``
