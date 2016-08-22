@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    unidom-contact (1.0.1)
+    unidom-contact (1.1)
       unidom-common (>= 1.0)
 
 GEM
