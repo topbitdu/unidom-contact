@@ -31,3 +31,8 @@
 1. As Contact concern
 2. As Subscriber concern
 3. Improved the Email Address model to include the As Contact concern
+
+## v1.2
+1. As Email Address Subscriber concern
+2. Improved the As Contact concern to add the #is_subscribed_as_contact! method
+3. Improved the As Subscriber concern to add the #subscribe_contact! method

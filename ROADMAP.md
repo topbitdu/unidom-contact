@@ -33,5 +33,10 @@
 3. Improve the Email Address model to include the As Contact concern
 
 ## v1.2
-1. Improve the As Contact concern to add the #is_subscribed_as_contact! method
-2. Improve the As Subscriber concern to add the #subscribe_contact! method
+1. As Email Address Subscriber concern
+2. Improve the As Contact concern to add the #is_subscribed_as_contact! method
+3. Improve the As Subscriber concern to add the #subscribe_contact! method
+
+## v1.3
+1. Improve the As Contact concern to add the #is_subscribed_as_contact? method
+2. Improve the As Subscriber concern to add the #subscribe_contact? method
