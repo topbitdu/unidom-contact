@@ -51,12 +51,14 @@ include Unidom::Contact::Concerns::AsEmailAddressSubscriber
 ### As Contact concern
 The As Contact concern do the following tasks for the includer automatically:  
 1. Define the has_many :contact_subscriptions macro as: ``has_many :contact_subscriptions, class_name: 'Unidom::Contact::ContactSubscription', as: :contact``
-2. Define the #subscribe_contact! method as: ``def subscribe_contact!(contact, at: Time.now)``
+2. Define the #is_subscribed_as_contact! method as: ``is_subscribed_as_contact!(by: nil, at: Time.now, name: by.try(:name), primary: true)``
+3. Define the #is_subscribed_as_contact? method as: ``is_subscribed_as_contact?(by: nil, at: Time.now, primary: true)``
 
 ### As Subscriber concern
 The As Subscriber concern do the following tasks for the includer automatically:  
 1. Define the has_many :contact_subscriptions macro as: ``has_many :contact_subscriptions, class_name: 'Unidom::Contact::ContactSubscription', as: :subscriber``
-2. Define the #is_subscribed_as_contact! method as: ``def is_subscribed_as_contact!(by: nil, at: Time.now)``
+2. Define the #subscribe_contact! method as: ``subscribe_contact!(contact, at: Time.now, name: nil, primary: true)``
+3. Define the #subscribe_contact? method as: ``subscribe_contact?(contact, at: Time.now, primary: true)``
 
 ### As Email Address Subscriber concern
 The As Email Address Subscriber concern do the following tasks for the includer automatically:  
