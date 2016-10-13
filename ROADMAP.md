@@ -43,3 +43,7 @@
 3. Improve the As Subscriber concern to add the #subscribe_contact? method
 4. Improve the As Subscriber concern for the #subscribe_contact! method
 5. Improve the Contact Subscription model for the .subscribe! method
+
+## v1.4
+1. Landline Phone Number model & migration
+2. As Landline Phone Number Subscriber concern
