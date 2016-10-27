@@ -1,6 +1,6 @@
 # Contact Subscription 是联系方式和参与者之间的关联关系。
 
-class Unidom::Contact::ContactSubscription < ActiveRecord::Base
+class Unidom::Contact::ContactSubscription < Unidom::Contact::ApplicationRecord
 
   self.table_name = 'unidom_contact_subscriptions'
 
