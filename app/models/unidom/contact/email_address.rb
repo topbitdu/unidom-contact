@@ -1,6 +1,6 @@
 # Email Address 是电子邮箱地址。
 
-class Unidom::Contact::EmailAddress < ActiveRecord::Base
+class Unidom::Contact::EmailAddress < Unidom::Contact::ApplicationRecord
 
   self.table_name = 'unidom_email_addresses'
 
