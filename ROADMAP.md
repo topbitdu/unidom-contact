@@ -44,6 +44,9 @@
 4. Improve the As Subscriber concern for the #subscribe_contact! method
 5. Improve the Contact Subscription model for the .subscribe! method
 
+## v1.3.1
+1. Improve the Ruby Gem Specification to depend on [unidom-common](https://github.com/topbitdu/unidom-common) v1.6
+
 ## v1.4
 1. Landline Phone Number model & migration
 2. As Landline Phone Number Subscriber concern
