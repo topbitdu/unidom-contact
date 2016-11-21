@@ -1,7 +1,7 @@
 # Unidom Contact Change Log 联系方式领域模型引擎变更日志
 
 ## v0.1
-1. Contact Subscription model & migration
+1. Contact Subscription model & migration (20010301000000)
 2. Email Address model & migration
 
 ## v0.2
