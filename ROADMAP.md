@@ -2,7 +2,7 @@
 
 ## v0.1
 1. Contact Subscription model & migration (20010301000000)
-2. Email Address model & migration
+2. Email Address model & migration (20010302000000)
 
 ## v0.2
 1. Improved the Contact Subscription model to include the Model Extension concern
