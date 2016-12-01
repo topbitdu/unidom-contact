@@ -13,7 +13,7 @@
 2. Improved the Ruby Gem Specification to depend on [unidom-common](https://github.com/topbitdu/unidom-common) v0.5
 
 ## v0.3.1
-1. Improved the Contact Subscription model to enhance the keyword arguments of the ::subscribe method
+1. Improved the Contact Subscription model to enhance the keyword arguments of the .``subscribe`` method
 
 ## v0.4
 1. Improve the Contact Subscription model to add the #``subscribe!`` method
