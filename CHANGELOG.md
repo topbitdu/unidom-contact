@@ -38,7 +38,7 @@
 3. Improved the As Subscriber concern to add the #``subscribe_contact!`` method
 
 ## v1.3
-1. Improved the As Contact concern to add the #is_subscribed_as_contact? method
+1. Improved the As Contact concern to add the #``is_subscribed_as_contact?`` method
 2. Improved the As Contact concern for the #is_subscribed_as_contact! method
 3. Improved the As Subscriber concern to add the #subscribe_contact? method
 4. Improve the As Subscriber concern for the #subscribe_contact! method
