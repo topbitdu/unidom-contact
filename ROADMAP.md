@@ -42,7 +42,7 @@
 2. Improve the As Contact concern for the #``is_subscribed_as_contact!`` method
 3. Improve the As Subscriber concern to add the #``subscribe_contact?`` method
 4. Improve the As Subscriber concern for the #``subscribe_contact!`` method
-5. Improve the Contact Subscription model for the .subscribe! method
+5. Improve the Contact Subscription model for the .``subscribe!`` method
 
 ## v1.3.1
 1. Improve the Ruby Gem Specification to depend on [unidom-common](https://github.com/topbitdu/unidom-common) v1.6
