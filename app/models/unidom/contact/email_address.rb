@@ -1,3 +1,4 @@
+##
 # Email Address 是电子邮箱地址。
 
 class Unidom::Contact::EmailAddress < Unidom::Contact::ApplicationRecord
@@ -28,7 +29,7 @@ class Unidom::Contact::EmailAddress < Unidom::Contact::ApplicationRecord
   /**
   Validate an email address.
   Provide email address (raw input)
-  Returns true if the email address has the email 
+  Returns true if the email address has the email
   address format and the domain exists.
   */
   function validEmail($email)
@@ -78,7 +79,7 @@ class Unidom::Contact::EmailAddress < Unidom::Contact::ApplicationRecord
         else if (!preg_match('/^(\\\\.|[A-Za-z0-9!#%&`_=\\/$\'*+?^{}|~.-])+$/',
                    str_replace("\\\\","",$local)))
         {
-           // character not valid in local part unless 
+           // character not valid in local part unless
            // local part is quoted
            if (!preg_match('/^"(\\\\"|[^"])+"$/',
                str_replace("\\\\","",$local)))
