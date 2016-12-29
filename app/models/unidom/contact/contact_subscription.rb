@@ -1,3 +1,4 @@
+##
 # Contact Subscription 是联系方式和参与者之间的关联关系。
 
 class Unidom::Contact::ContactSubscription < Unidom::Contact::ApplicationRecord
