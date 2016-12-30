@@ -53,6 +53,10 @@
 ## v1.3.3
 1. Improve the Ruby Gem Specification to depend on [unidom-common](https://github.com/topbitdu/unidom-common) v1.7.1
 
+## v1.3.4
+1. Improve the Ruby Gem Specification to depend on [unidom-common](https://github.com/topbitdu/unidom-common) v1.8
+2. Improve the Engine class to include the Engine Extension
+
 ## v1.4
 1. Landline Phone Number model & migration
 2. As Landline Phone Number Subscriber concern
