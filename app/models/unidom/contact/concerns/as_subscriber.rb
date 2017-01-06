@@ -1,3 +1,6 @@
+##
+# As Subscriber 是联系人的领域逻辑关注点。
+
 module Unidom::Contact::Concerns::AsSubscriber
 
   extend ActiveSupport::Concern
