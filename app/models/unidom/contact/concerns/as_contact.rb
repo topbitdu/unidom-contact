@@ -1,3 +1,6 @@
+##
+# As Contact 是联系方式的领域逻辑关注点。
+
 module Unidom::Contact::Concerns::AsContact
 
   extend ActiveSupport::Concern
