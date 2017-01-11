@@ -1,6 +1,8 @@
 # Unidom Contact 联系方式领域模型引擎
 
+[![Documentation](http://img.shields.io/badge/docs-rdoc.info-blue.svg)](http://www.rubydoc.info/gems/unidom-contact/frames)
 [![License](https://img.shields.io/badge/license-MIT-green.svg)](http://opensource.org/licenses/MIT)
+
 [![Gem Version](https://badge.fury.io/rb/unidom-contact.svg)](https://badge.fury.io/rb/unidom-contact)
 [![Dependency Status](https://gemnasium.com/badges/github.com/topbitdu/unidom-contact.svg)](https://gemnasium.com/github.com/topbitdu/unidom-contact)
 
