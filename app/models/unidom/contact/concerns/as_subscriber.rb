@@ -9,6 +9,9 @@ module Unidom::Contact::Concerns::AsSubscriber
 
     has_many :contact_subscriptions, class_name: 'Unidom::Contact::ContactSubscription', as: :subscriber
 
+    ##
+    # 将当前参与者与指定的联系方式 contact 关联起来。 at 是关联时间，缺省为当前时间。 name 是联系方式的备注。 primary 是主要联系标志。
+    # 如： current_person.subscribe_contact! phone_number, at: Time.now, name: '私人手机号码', primary: true
     def subscribe_contact!(contact, at: Time.now, name: nil, primary: true)
 
       raise ArgumentError.new('The contact argument is required.') if contact.blank?
