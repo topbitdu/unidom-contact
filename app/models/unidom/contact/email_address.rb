@@ -97,4 +97,4 @@ class Unidom::Contact::EmailAddress < Unidom::Contact::ApplicationRecord
   }
 =end
 
-end
+end unless Unidom::Common::Neglection.namespace_neglected? 'Unidom::Contact::EmailAddress'
