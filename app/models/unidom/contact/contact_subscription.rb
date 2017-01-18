@@ -28,4 +28,4 @@ class Unidom::Contact::ContactSubscription < Unidom::Contact::ApplicationRecord
     contact_is(contact).subscribed_by(subscriber).valid_at(now: opened_at).alive.first_or_create! name: name, elemental: primary, grade: grade, priority: priority, opened_at: opened_at
   end
 
-end
+end unless Unidom::Common::Neglection.namespace_neglected? 'Unidom::Contact::ContactSubscription'
