@@ -62,5 +62,10 @@
 2. Improve the models to support the namespace neglecting
 
 ## v1.4
+1. Models RSpec examples manifest
+2. Types RSpec examples manifest
+3. Validators RSpec examples manifest
+
+## v1.5
 1. Landline Phone Number model & migration
 2. As Landline Phone Number Subscriber concern
