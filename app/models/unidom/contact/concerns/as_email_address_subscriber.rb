@@ -1,3 +1,6 @@
+##
+# As Email Address Subscriber 是 e-Mail 联系人的领域逻辑关注点。
+
 module Unidom::Contact::Concerns::AsEmailAddressSubscriber
 
   extend ActiveSupport::Concern
