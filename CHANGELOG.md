@@ -45,7 +45,7 @@
 5. Improved the Contact Subscription model for the .``subscribe!`` method
 
 ## v1.3.1
-1. Improve the Ruby Gem Specification to depend on [unidom-common](https://github.com/topbitdu/unidom-common) v1.6
+1. Improved the Ruby Gem Specification to depend on [unidom-common](https://github.com/topbitdu/unidom-common) v1.6
 
 ## v1.3.2
 1. Improve the Ruby Gem Specification to depend on [unidom-common](https://github.com/topbitdu/unidom-common) v1.7
