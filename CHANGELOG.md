@@ -59,7 +59,7 @@
 
 ## v1.3.5
 1. Improved the Ruby Gem Specification to depend on [unidom-common](https://github.com/topbitdu/unidom-common) v1.9
-2. Improve the models to support the namespace neglecting
+2. Improved the models to support the namespace neglecting
 
 ## v1.4
 1. Models RSpec examples manifest
