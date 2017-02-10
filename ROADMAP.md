@@ -66,6 +66,11 @@
 2. Types RSpec examples manifest
 3. Validators RSpec examples manifest
 
+## v1.4.1
+1. Improve the Contact Subscription spec for the validations on the #name attribute
+2. Improve the Email Address spec for the validations on the #full_address attribute
+3. Improve the Email Address model for the before_validation callback
+
 ## v1.5
 1. Landline Phone Number model & migration
 2. As Landline Phone Number Subscriber concern
