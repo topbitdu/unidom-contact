@@ -18,10 +18,10 @@ class Unidom::Contact::EmailAddress < Unidom::Contact::ApplicationRecord
   scope :domain_part_is,  ->(domain_part)  { where domain_part:  domain_part  }
 
   before_validation do
-    self.full_address.strip!
-    self.personalized_name = self.full_address if self.personalized_name.blank?
+    self.full_address = full_address.to_s.strip
+    self.personalized_name = full_address if personalized_name.blank?
     self.full_address.downcase!
-    self.local_part, self.domain_part = self.full_address.split '@', 2
+    self.local_part, self.domain_part = full_address.split '@', 2
   end
 
   # http://blog.csdn.net/wide288/article/details/20782399
