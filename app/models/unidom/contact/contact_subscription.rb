@@ -7,7 +7,7 @@ class Unidom::Contact::ContactSubscription < Unidom::Contact::ApplicationRecord
 
   include Unidom::Common::Concerns::ModelExtension
 
-  validates :name,     presence: true, length:       { in: 2..self.columns_hash['name'].limit }
+  validates :name, presence: true, length: { in: 2..self.columns_hash['name'].limit }
 
   belongs_to :contact,    polymorphic: true
   belongs_to :subscriber, polymorphic: true
