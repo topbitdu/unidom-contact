@@ -68,5 +68,5 @@
 
 ## v1.4.1
 1. Improved the Contact Subscription spec for the validations on the #``name`` attribute
-2. Improved the Email Address spec for the validations on the #full_address attribute
+2. Improved the Email Address spec for the validations on the #``full_address`` attribute
 3. Improved the Email Address model for the before_validation callback
