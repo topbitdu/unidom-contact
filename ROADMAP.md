@@ -71,6 +71,9 @@
 2. Improve the Email Address spec for the validations on the #``full_address`` attribute
 3. Improve the Email Address model for the ``before_validation`` callback
 
+## v1.4.2
+1. Improve the Contact Subscription spec for the ``belongs_to :contact, polymorphic: true`` macro
+
 ## v1.5
 1. Landline Phone Number model & migration
 2. As Landline Phone Number Subscriber concern
