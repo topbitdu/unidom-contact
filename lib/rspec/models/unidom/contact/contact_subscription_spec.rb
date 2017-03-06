@@ -31,6 +31,13 @@ describe Unidom::Contact::ContactSubscription, type: :model do
       { name: 'A'*name_max_length      } => 0,
       { name: 'A'*(name_max_length+1)  } => 1
 
+    email_address_attributes = {
+      personalized_name: 'Tim Jason',
+      full_address:      'tim.jason@company.com'
+    }
+
+    it_behaves_like 'belongs_to', model_attributes, :contact, Unidom::Contact::EmailAddress, email_address_attributes
+
   end
 
 end
