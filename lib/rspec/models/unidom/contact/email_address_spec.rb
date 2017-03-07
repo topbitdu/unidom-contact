@@ -32,6 +32,27 @@ describe Unidom::Contact::EmailAddress, type: :model do
       { full_address: "l@#{'c'*(full_address_max_length-5)}.de" } => 0,
       { full_address: "l@#{'c'*(full_address_max_length-4)}.de" } => 1
 
+    it_behaves_like 'scope', :full_address_is, [
+      { attributes_collection: [ model_attributes                                                 ], count_diff: 1, args: [ model_attributes[:full_address] ] },
+      { attributes_collection: [ model_attributes                                                 ], count_diff: 0, args: [ 'tom.king@corporation.com'      ] },
+      { attributes_collection: [ model_attributes.merge(full_address: 'tom.king@corporation.com') ], count_diff: 0, args: [ model_attributes[:full_address] ] },
+      { attributes_collection: [ model_attributes.merge(full_address: 'tom.king@corporation.com') ], count_diff: 1, args: [ 'tom.king@corporation.com'      ] }
+    ]
+
+    it_behaves_like 'scope', :local_part_is, [
+      { attributes_collection: [ model_attributes                                                 ], count_diff: 1, args: [ 'tim.jason' ] },
+      { attributes_collection: [ model_attributes                                                 ], count_diff: 0, args: [ 'tom.king'  ] },
+      { attributes_collection: [ model_attributes.merge(full_address: 'tom.king@corporation.com') ], count_diff: 0, args: [ 'tim.jason' ] },
+      { attributes_collection: [ model_attributes.merge(full_address: 'tom.king@corporation.com') ], count_diff: 1, args: [ 'tom.king'  ] }
+    ]
+
+    it_behaves_like 'scope', :domain_part_is, [
+      { attributes_collection: [ model_attributes                                                 ], count_diff: 1, args: [ 'company.com'     ] },
+      { attributes_collection: [ model_attributes                                                 ], count_diff: 0, args: [ 'corporation.com' ] },
+      { attributes_collection: [ model_attributes.merge(full_address: 'tom.king@corporation.com') ], count_diff: 0, args: [ 'company.com'     ] },
+      { attributes_collection: [ model_attributes.merge(full_address: 'tom.king@corporation.com') ], count_diff: 1, args: [ 'corporation.com' ] }
+    ]
+
   end
 
 end
