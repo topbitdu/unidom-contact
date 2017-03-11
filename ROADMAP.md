@@ -75,6 +75,9 @@
 1. Improve the Contact Subscription spec for the ``belongs_to :contact, polymorphic: true`` macro
 2. Improve the Email Address spec for the full_address_is scope, the local_part_is scope, & the domain_part_is scope
 
+## v1.4.3
+1. Improve the Contact Subscription spec for the contact_is scope
+
 ## v1.5
 1. Landline Phone Number model & migration
 2. As Landline Phone Number Subscriber concern
