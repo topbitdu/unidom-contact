@@ -38,6 +38,8 @@ describe Unidom::Contact::ContactSubscription, type: :model do
 
     it_behaves_like 'belongs_to', model_attributes, :contact, Unidom::Contact::EmailAddress, email_address_attributes
 
+    it_behaves_like 'polymorphic scope', model_attributes, :contact_is, :contact, [ Unidom::Contact::EmailAddress ]
+
   end
 
 end
