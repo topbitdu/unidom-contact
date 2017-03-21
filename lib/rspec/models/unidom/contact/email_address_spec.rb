@@ -14,6 +14,7 @@ describe Unidom::Contact::EmailAddress, type: :model do
     }
 
     it_behaves_like 'Unidom::Common::Concerns::ModelExtension', model_attributes
+    it_behaves_like 'Unidom::Contact::Concerns::AsContact',     model_attributes
 
     full_address_max_length = described_class.columns_hash['full_address'].limit
 
