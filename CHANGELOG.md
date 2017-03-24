@@ -77,3 +77,9 @@
 
 ## v1.4.3
 1. Improve the Contact Subscription spec for the contact_is scope
+
+## v1.4.4
+1. As Contact shared examples
+2. As Subscriber shared examples
+3. RSpec shared examples manifest
+4. Improve the Email Address spec for the As Contact concern

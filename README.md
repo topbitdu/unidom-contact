@@ -114,6 +114,8 @@ end
 
 ## RSpec examples
 
+### RSpec example manifest (run automatically)
+
 ```ruby
 # spec/models/unidom_spec.rb
 require 'unidom/contact/models_rspec'
@@ -123,4 +125,51 @@ require 'unidom/contact/types_rspec'
 
 # spec/validators/unidom_spec.rb
 require 'unidom/contact/validators_rspec'
+```
+
+### RSpec shared examples (to be integrated)
+
+```ruby
+# lib/unidom.rb
+def initialize_unidom
+
+  Unidom::Party::Person.class_eval do
+    include Unidom::Contact::Concerns::AsSubscriber
+  end
+
+  #Unidom::Contact::EmailAddress.class_eval do
+  #  include Unidom::Contact::Concerns::AsContact
+  #end
+
+end
+
+# spec/rails_helper.rb
+require 'unidom'
+initialize_unidom
+
+# spec/support/unidom_rspec_shared_examples.rb
+require 'unidom/contact/rspec_shared_examples'
+
+# spec/models/unidom/party/person_spec.rb
+describe Unidom::Party::Person do
+
+  model_attribtues = {
+    name: 'Tim'
+  }
+
+  it_behaves_like 'Unidom::Contact::Concerns::AsSubscriber', model_attribtues
+
+end
+
+# spec/models/unidom/contact/email_address_spec.rb
+describe Unidom::Position::Post do
+
+  model_attributes = {
+      personalized_name: 'Tim Jason',
+      full_address:      'tim.jason@company.com'
+    }
+
+  it_behaves_like 'Unidom::Contact::Concerns::AsContact', model_attributes
+
+end
 ```
