@@ -84,6 +84,10 @@
 3. RSpec shared examples manifest
 4. Improve the Email Address spec for the As Contact concern
 
+## v1.4.5
+1. Improve the Contact Subscription spec for the validations on the #name attribute
+2. Improve the Email Address spec for the validations on the #personalized_name attribute
+
 ## v1.5
 1. Landline Phone Number model & migration
 2. As Landline Phone Number Subscriber concern
