@@ -16,20 +16,10 @@ describe Unidom::Contact::ContactSubscription, type: :model do
       name:            'Home'
     }
 
-    name_max_length = described_class.columns_hash['name'].limit
-
     it_behaves_like 'Unidom::Common::Concerns::ModelExtension', model_attributes
 
-    it_behaves_like 'validates', model_attributes, :name,
-      {             } => 0,
-      { name: nil   } => 2,
-      { name: ''    } => 2,
-      { name: 'A'   } => 1,
-      { name: 'Al'  } => 0,
-      { name: 'Bob' } => 0,
-      { name: 'A'*(name_max_length-1)  } => 0,
-      { name: 'A'*name_max_length      } => 0,
-      { name: 'A'*(name_max_length+1)  } => 1
+    it_behaves_like 'validates text', model_attributes, :name,
+      length: 2..described_class.columns_hash['name'].limit
 
     email_address_attributes = {
       personalized_name: 'Tim Jason',
