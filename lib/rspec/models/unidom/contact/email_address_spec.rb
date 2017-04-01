@@ -17,7 +17,6 @@ describe Unidom::Contact::EmailAddress, type: :model do
     it_behaves_like 'Unidom::Contact::Concerns::AsContact',     model_attributes
 
     full_address_max_length = described_class.columns_hash['full_address'].limit
-
     it_behaves_like 'validates', model_attributes, :full_address,
       {                               } => 0,
       { full_address: nil             } => 2,
@@ -32,6 +31,22 @@ describe Unidom::Contact::EmailAddress, type: :model do
       { full_address: "l@#{'c'*(full_address_max_length-6)}.de" } => 0,
       { full_address: "l@#{'c'*(full_address_max_length-5)}.de" } => 0,
       { full_address: "l@#{'c'*(full_address_max_length-4)}.de" } => 1
+
+    personalized_name_max_length = described_class.columns_hash['personalized_name'].limit
+    it_behaves_like 'validates', model_attributes, :personalized_name,
+      {                                    } => 0,
+      { personalized_name: nil             } => 0,
+      { personalized_name: ''              } => 0,
+      { personalized_name: 'l'             } => 0,
+      { personalized_name: 'l@'            } => 0,
+      { personalized_name: 'l@d'           } => 0,
+      { personalized_name: 'l@us'          } => 0,
+      { personalized_name: 'l@com'         } => 0,
+      { personalized_name: 'l@jobs'        } => 0,
+      { personalized_name: 'l@jobs.com.cn' } => 0,
+      { personalized_name: 'c'*(personalized_name_max_length-1) } => 0,
+      { personalized_name: 'c'*personalized_name_max_length     } => 0,
+      { personalized_name: 'c'*(personalized_name_max_length+1) } => 1
 
     it_behaves_like 'scope', :full_address_is, [
       { attributes_collection: [ model_attributes                                                 ], count_diff: 1, args: [ model_attributes[:full_address] ] },
