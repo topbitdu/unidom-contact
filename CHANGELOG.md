@@ -72,7 +72,7 @@
 3. Improved the Email Address model for the ``before_validation`` callback
 
 ## v1.4.2
-1. Improve the Contact Subscription spec for the ``belongs_to :contact, polymorphic: true`` macro
+1. Improved the Contact Subscription spec for the ``belongs_to :contact, polymorphic: true`` macro
 2. Improve the Email Address spec for the ``full_address_is`` scope, the local_part_is scope, & the domain_part_is scope
 
 ## v1.4.3
