@@ -76,7 +76,7 @@
 2. Improved the Email Address spec for the ``full_address_is`` scope, the ``local_part_is`` scope, & the ``domain_part_is`` scope
 
 ## v1.4.3
-1. Improved the Contact Subscription spec for the contact_is scope
+1. Improved the Contact Subscription spec for the ``contact_is`` scope
 
 ## v1.4.4
 1. As Contact shared examples
