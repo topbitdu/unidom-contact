@@ -88,6 +88,10 @@
 1. Improve the Contact Subscription spec for the validations on the #``name`` attribute
 2. Improve the Email Address spec for the validations on the #``personalized_name`` attribute
 
+## v1.4.6
+1. Improve the Ruby Gem Specification to depend on the unidom-common v1.10
+2. Improve the Contact Subscription migration & the Email Address migration for the #opened_at column, & the #closed_at column
+
 ## v1.5
 1. Landline Phone Number model & migration
 2. As Landline Phone Number Subscriber concern
